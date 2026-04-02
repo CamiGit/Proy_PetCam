@@ -1,0 +1,34 @@
+{% extends 'Base.html' %}
+
+{% block title %}
+
+Lista de categorias
+
+{% endblock %}
+
+{% block search %}
+
+    <form class="form-inline my-2 my-lg-0" action="/Categories/list_category" method="GET">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+    </form>
+
+{% endblock %}
+
+{% block body %}
+
+<a href="/Categories/new_category" class="btn btn-primary">Crear Categoria</a>
+
+{% for Category in category %}
+
+<div class="card" style="width: 18rem;">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDpncO2AL_VN5NZACR4G_JedWm-Y_279x2X6ukDdBCJlydxuQNFB2bxT52YQuv7oX2vJY&usqp=CAU"
+        class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{Category.name}}</h5>
+    </div>
+</div>
+
+{% endfor %}
+
+{% endblock %}

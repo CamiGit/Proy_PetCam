@@ -1,0 +1,31 @@
+{% extends 'Base.html' %}
+
+{% block title %}
+    Crear Categoria
+{% endblock %}
+
+{% block body %}
+
+    {% if form %}
+        <form action="" method="POST">
+        
+            {% csrf_token %}
+            
+            <table>
+                {{form.as_table}}
+            </table>
+
+            <input type="submit" value="Crear Categoria">
+            
+        </form>
+    {% endif %}
+
+    {% if form_errors %}    
+        {{form_errors}}
+    {% endif %}
+
+    {% if message %}
+        <h2 style="color: aqua;"> {{message}}</h2>
+    {% endif %}
+
+{% endblock %}

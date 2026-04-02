@@ -1,0 +1,37 @@
+{% extends 'Base.html' %}
+
+{% block title %}
+
+    Listado de usuarios
+
+{% endblock %}
+
+{% block search %}
+
+    <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+    </form>
+
+{% endblock %}
+
+{% block body %}
+
+    <a href="/Users/new_user" class="btn btn-primary">Crear Usuario</a>
+
+    {% for Users in user %}
+
+        <div class="card" style="width: 18rem;">
+            <div class="card-header">
+            {{Users.name}}
+            </div>
+            <ul class="list-group list-group-flush">
+            <li class="list-group-item">{{Users.id_card}}</li>
+            <li class="list-group-item">{{Users.address}}</li>
+            <li class="list-group-item">{{Users.phone}}</li>
+            </ul>
+        </div>
+    
+    {% endfor %}
+
+{% endblock %}

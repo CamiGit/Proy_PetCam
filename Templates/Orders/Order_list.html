@@ -1,0 +1,34 @@
+{% extends 'Base.html' %}
+
+{% block title %}
+
+Listado de pedidos
+
+{% endblock %}
+
+{% block search %}
+
+    <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+    </form>
+
+{% endblock %}
+
+{% block body %}
+
+<a href="/Orders/new_order" class="btn btn-primary">Crear Pedido</a>
+
+{% for Orders in order %}
+
+<div class="card" style="width: 18rem;">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{Orders.number_order}}</li>
+        <li class="list-group-item">{{Orders.name_client}}</li>
+        <li class="list-group-item">{{Orders.time}}</li>
+    </ul>
+</div>
+
+{% endfor %}
+
+{% endblock %}
