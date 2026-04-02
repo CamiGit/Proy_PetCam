@@ -2,7 +2,7 @@
 
 **Instalación:**
 
-Debes clonar el repositorio desde el siguiente enlace https://github.com/CamiGit/ProCoderF.git, luego ingresar a la carpeta principal del proyecto y ejecutar el comando: ***Python manage.py run server***, luego ingresamos al enlace suministrado en el cual podremos ingresar a las diferentes Urls.
+Debes clonar el repositorio desde el siguiente enlace [https://github.com/CamiGit/ProCoderF.git](https://github.com/CamiGit/Proy_PetCam.git), luego ingresar a la carpeta principal del proyecto y ejecutar el comando: ***Python manage.py run server***, luego ingresamos al enlace suministrado en el cual podremos ingresar a las diferentes Urls.
 
 **Introducción:**
 
